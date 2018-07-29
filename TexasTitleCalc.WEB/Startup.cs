@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace Summy.WEB
+namespace TexasTitleCalc.WEB
 {
     public class Startup
     {

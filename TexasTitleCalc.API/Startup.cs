@@ -9,10 +9,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-using Summy.API.Models;
+using TexasTitleCalc.API.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Summy.API
+namespace TexasTitleCalc.API
 {
     public class Startup
     {

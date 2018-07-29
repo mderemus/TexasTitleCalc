@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Summy.WEB.Controllers
+namespace TexasTitleCalc.WEB.Controllers
 {
     [Produces("application/json")]
     [Route("api/[controller]")]

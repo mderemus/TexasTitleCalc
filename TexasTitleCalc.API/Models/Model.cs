@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
-namespace Summy.API.Models
+namespace TexasTitleCalc.API.Models
 {
   public class Blog
   {

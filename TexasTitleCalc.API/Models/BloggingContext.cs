@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Summy.API.Models
+namespace TexasTitleCalc.API.Models
 {
   public class BloggingContext : DbContext
   {
