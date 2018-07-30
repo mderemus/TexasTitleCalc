@@ -1,25 +1,28 @@
 ﻿import { Injectable } from '@angular/core';
-import { Http, Response, RequestOptions, Headers } from '@angular/http';
+
 import { Observable } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
 
 @Injectable()
 export class HomeService {
 
-  constructor(private http: Http) {
+  constructor(private http: HttpClient) {
 
   }
 
 
-  GetHomeMessage(): Observable<any[]> {
-    return this.http.get(`api/default`)
-      .map((res: Response) => res.json())
-      .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
+  GetHomeMessage() {
+    return this.http.get('api/default');
   }
 
-  GetAPIMessage(): Observable<any[]> {
-    return this.http.get(`api/blogging`)
-      .map((res: Response) => res.json())
-      .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
+  GetAPIMessage() {
+    return this.http.get('api/blog');
   }
 
 }

@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpModule, Http, XHRBackend, RequestOptions } from '@angular/http';
+import { XHRBackend, RequestOptions } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -14,7 +16,7 @@ import { HomeService } from "./core/services/home.service";
     imports: [
         BrowserModule,
         FormsModule,
-        HttpModule,
+       HttpClientModule,
         routing
     ],
     declarations: [

@@ -9,14 +9,14 @@ import { HomeService } from "../../core/services/home.service";
 
 export class HomeComponent implements OnInit {
 
-  result: any[] = [];
-  blogging: any[] = [];
+  result: any = [];
+  blogging: any = [];
 
 
   constructor(private hserv: HomeService) {
-    this.hserv.GetHomeMessage().subscribe(response => this.result = response);
+    this.hserv.GetHomeMessage().subscribe(data => this.result = data);
 
-    this.hserv.GetAPIMessage().subscribe(resp => this.blogging = resp);
+    this.hserv.GetAPIMessage().subscribe(data => this.blogging = data[0]);
 
   }
 
